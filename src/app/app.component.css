@@ -1,0 +1,47 @@
+p {
+  font-family: Lato;
+}
+
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-container {
+  min-width: 960px;
+  min-height: 1000px;
+  margin: 10px;
+}
+
+.sideButton
+{
+  display: block;
+  margin: 15px;
+}
+
+.example-card {
+    float: left;
+  max-width: 400px;
+  margin: 10px;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.main-photo
+{
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.toolbar-menu-buttons
+{
+  font-weight: 20;
+}
+

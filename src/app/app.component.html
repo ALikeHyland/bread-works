@@ -1,0 +1,48 @@
+<mat-toolbar color="primary">
+	<mat-toolbar-row>
+		<span class="toolbar-menu-buttons">Bread Works</span>
+    <span class="example-spacer"></span>
+    <button mat-button [matMenuTriggerFor]="menu">Bread Stuffs</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Sour Dough</button>
+      <button mat-menu-item>French Bread</button>
+    </mat-menu>
+    <button mat-icon-button color="white">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button color="white">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-toolbar-row>  
+</mat-toolbar>
+
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+    <button class="sideButton" mat-raised-button color="primary">Primary</button>
+    <button class="sideButton" mat-raised-button color="accent">Accent</button>
+    <button class="sideButton" mat-raised-button color="warn">Warn</button>
+  </mat-drawer>
+  <mat-drawer-content>
+
+<mat-card *ngFor="let card of cards" class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"    
+      [ngStyle]="{'background-image' : 'url(' + card.avatarPhoto + ')'}">
+    </div>
+    <mat-card-title>{{card.title}}</mat-card-title>
+    <mat-card-subtitle>{{card.subTitle}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image class="main-photo" src="{{card.mainPhoto}}" alt="Photo of {{card.title}}">
+  <mat-card-content>
+    <p>
+      {{card.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
+
+  </mat-drawer-content>
+</mat-drawer-container>
